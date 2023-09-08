@@ -1,4 +1,4 @@
-package ch02.IncreaseDecreaseExample;
+package ch03.IncreaseDecreaseExample;
 
 public class IncreaseDecreaseExample {
     public static void main(String[] args){
