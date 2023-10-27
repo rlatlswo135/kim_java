@@ -1,5 +1,8 @@
 package ch07.InterfaceExample;
 
+interface Machine {
+    void clean();
+}
 interface RemoteControl {
     int BATTERY = 100;
 
@@ -18,8 +21,14 @@ interface RemoteControl {
     };
 }
 
-class Television implements RemoteControl {
+// 다중 interface 구현
+class Television implements RemoteControl,Machine {
     @Override
+
+    public void clean(){
+        System.out.println("기계 청소를 합니다.");
+    }
+
     public void turnOn(){
         System.out.println("tv를 켭니다." + "남은 배터리 : " + RemoteControl.BATTERY);
     }
