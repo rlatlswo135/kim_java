@@ -2,17 +2,24 @@ package ch07.CarExample;
 
 interface Tire {
     void roll();
+    void checkTire();
 }
 
 class HanKookTire implements Tire {
     public void roll(){
         System.out.println("한국 타이어가 굴러갑니다.");
     }
+    public void checkTire(){
+        System.out.println("한국 타이어입니다.");
+    }
 }
 
 class KumhoTire implements Tire{
     public void roll(){
         System.out.println("금호 타이어가 굴러갑니다.");
+    }
+    public void checkTire(){
+        System.out.println("금호 타이어입니다.");
     }
 }
 
@@ -23,6 +30,10 @@ class Car {
     public void run(){
         tire1.roll();
         tire2.roll();
+    }
+
+    public void getTire(Tire tire){ // 매개변수의 다형성
+        tire.checkTire();
     }
 }
 
