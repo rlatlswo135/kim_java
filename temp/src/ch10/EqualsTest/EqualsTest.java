@@ -1,4 +1,4 @@
-package bin.ch10.EqualsTest;
+package ch10.EqualsTest;
 
 public class EqualsTest {
     public static void main(String[] args) {

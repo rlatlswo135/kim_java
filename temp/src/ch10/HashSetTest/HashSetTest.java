@@ -1,4 +1,4 @@
-package bin.ch10.HashSetTest;
+package ch10.HashSetTest;
 
 import java.util.HashSet;
 
