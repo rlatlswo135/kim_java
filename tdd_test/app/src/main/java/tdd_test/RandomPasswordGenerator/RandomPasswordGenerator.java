@@ -34,7 +34,7 @@ public class RandomPasswordGenerator {
         CharacterRule specialCaseRule = new CharacterRule(specialChars,2);
 
 
-        String result = gen.generatePassword((int)(Math.random()*13)+1,lowerCaseRule,upperCaseRule,digitCaseRule,specialCaseRule);
+        String result = gen.generatePassword(12,lowerCaseRule,upperCaseRule,digitCaseRule,specialCaseRule);
         return result;
     }
 }
