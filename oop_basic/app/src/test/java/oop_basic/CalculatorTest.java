@@ -5,7 +5,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 import java.util.stream.Stream;
 
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -17,11 +16,11 @@ import org.junit.jupiter.params.provider.MethodSource;
  * 4. MVC패턴 사용
  */
 
-class CalculatorTest {
-    @DisplayName("덧셈 연산을 수행한다.")
+public class CalculatorTest {
+    @DisplayName("사칙 연산을 수행한다.")
     @ParameterizedTest
     @MethodSource("formulaAndResult")
-    void additionTest(int arg1, String operator, int arg2,int result){
+    void calculateTest(int arg1, String operator, int arg2,int result){
         assertThat(Calculator.calculate(arg1,operator,arg2)).isEqualTo(result);
     }
 
