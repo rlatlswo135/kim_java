@@ -41,7 +41,11 @@ public enum Operator {
     public abstract int calculate(int target1, int target2);
 
     public static int calculate(int target1, String operator, int target2) {
-        Arrays.stream(values());
-        return 0;
+        Operator chooseOperator = Arrays.stream(values())
+                .filter(val -> val.operator.equals(operator))
+                .findFirst()
+                .orElseThrow(() -> new IllegalArgumentException("올바른 연산자 아님"));
+
+        return chooseOperator.calculate(target1, target2);
     };
 }
