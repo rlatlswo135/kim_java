@@ -23,9 +23,5 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 
 class GradeCalculatorTest {
-    @Test
-    void appHasAGreeting() {
-        GradeCalculator classUnderTest = new GradeCalculator();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
-    }
+
 }
