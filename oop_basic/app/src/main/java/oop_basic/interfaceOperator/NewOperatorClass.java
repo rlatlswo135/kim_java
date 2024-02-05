@@ -7,7 +7,7 @@ public class NewOperatorClass implements NewOperator {
     }
 
     @Override
-    public int calculate(int target1, int target2) {
-        return target1 + target2;
+    public int calculate(PositiveNumber target1, PositiveNumber target2) {
+        return target1.getPositiveNumber() + target2.getPositiveNumber();
     }
 }
