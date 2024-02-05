@@ -3,12 +3,56 @@
  */
 package oop_basic;
 
-public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+import java.util.Arrays;
+import java.util.stream.Stream;
 
+enum EnumTest {
+    A("A") {
+        @Override
+        public String test(String arg) {
+            return arg;
+        }
+    },
+    B("B") {
+        @Override
+        public String test(String arg) {
+            return arg;
+
+        }
+    },
+    C("C") {
+        @Override
+        public String test(String arg) {
+            return arg;
+        }
+    },
+    D("D") {
+        @Override
+        public String test(String arg) {
+            return arg;
+        }
+    };
+
+    private final String enumTest;
+
+    private EnumTest(String enumTest) {
+        this.enumTest = enumTest;
+    };
+
+    protected abstract String test(String arg);
+
+    static public EnumTest[] testValues() {
+        return values();
+    };
+
+    static public Stream<EnumTest> testValuesTwo() {
+        return Arrays.stream(values());
+    };
+}
+
+public class App {
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        // System.out.println(EnumTest.testValuesTwo());
+        EnumTest.testValuesTwo().forEach(t -> System.out.println(t.test("qwer")));
     }
 }

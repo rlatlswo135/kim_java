@@ -1,22 +1,27 @@
 package oop_basic;
 
+import java.util.Arrays;
+
 public enum Operator {
     PLUS("+") {
         @Override
         public int calculate(int target1, int target2) {
             return target1 + target2;
         }
-    },MINUS("-") {
+    },
+    MINUS("-") {
         @Override
         public int calculate(int target1, int target2) {
             return target1 - target2;
         }
-    },MULTI("*") {
+    },
+    MULTI("*") {
         @Override
         public int calculate(int target1, int target2) {
             return target1 * target2;
         }
-    },DEVI("/") {
+    },
+    DEVI("/") {
         @Override
         public int calculate(int target1, int target2) {
             return target1 / target2;
@@ -25,14 +30,18 @@ public enum Operator {
 
     private final String operator;
 
-    private Operator(String operator){
+    private Operator(String operator) {
         this.operator = operator;
     }
 
-    
-    public String getOperator(){
+    public String getOperator() {
         return this.operator;
     }
-    
+
     public abstract int calculate(int target1, int target2);
+
+    public static int calculate(int target1, String operator, int target2) {
+        Arrays.stream(values());
+        return 0;
+    };
 }
