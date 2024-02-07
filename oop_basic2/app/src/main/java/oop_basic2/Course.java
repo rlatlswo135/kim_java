@@ -48,4 +48,8 @@ public class Course {
 
         return gradeToNumber;
     }
+
+    public double multiplyPointAndGrade() {
+        return getPoint() * getGradeToNumber();
+    }
 }
